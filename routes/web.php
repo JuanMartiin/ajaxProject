@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('clothe', App\Http\Controllers\ClotheController::class);
 Route::get('/', [App\Http\Controllers\ClotheController::class, 'index'])->name('clothe.index');
+Route::post('fetchdata', [App\Http\Controllers\ClotheController::class, 'fetchData'])->name('clothe.fetchData');

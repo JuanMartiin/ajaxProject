@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
     <!-- ===============================================-->
@@ -20,7 +21,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url('assets/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url('assets/favicon-16x16.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/favicon.ico') }}">
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <link rel="manifest" href="{{ url('assets/manifest.json') }}">
     <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
 
@@ -194,6 +195,7 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
+    <script type="text/javascript" src="{{ url('assets/js/ajax.js') }}?{{rand(2, 20)}}"></script>
     <script src="{{ url('assets/popper.min.js') }}"></script>
     <script src="{{ url('assets/bootstrap.min.js') }}"></script>
     <script src="{{ url('assets/is.min.js') }}"></script>
@@ -203,7 +205,7 @@
       feather.replace();
     </script>
     <script src="{{ url('assets/theme.js') }}"></script>
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
   </body>
 
